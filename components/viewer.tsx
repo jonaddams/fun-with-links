@@ -40,11 +40,11 @@ export default function Viewer({ document }: ViewerProps) {
         container,
         document,
         licenseKey: licenseKey,
-        renderPageCallback: function (ctx, pageIndex, pageSize) {
+        renderPageCallback: function (ctx, pageIndex) {
           if (pageIndex === window.viewerInstance.totalPageCount - 1) {
             console.log('last page loaded');
 
-            window.viewerInstance.addEventListener('annotations.press', async (event: any) => {
+            window.viewerInstance.addEventListener('annotations.press', async (event: { annotation: any; preventDefault?: () => void }) => {
               if (event.annotation instanceof NutrientViewer.Annotations.LinkAnnotation) {
                 event.preventDefault?.();
                 const bbox = event.annotation?.toJSON()?.boundingBox?.toJSON() || null;
