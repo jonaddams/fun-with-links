@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 function cleanString(str: string): string {
   return str.replace(/(\.\s*|\s*\d+\s*)+$/, '').trim();
