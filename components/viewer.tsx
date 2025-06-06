@@ -44,7 +44,7 @@ export default function Viewer({ document }: ViewerProps) {
           if (pageIndex === window.viewerInstance.totalPageCount - 1) {
             console.log('last page loaded');
 
-            window.viewerInstance.addEventListener('annotations.press', async (event: { annotation: any; preventDefault?: () => void }) => {
+            window.viewerInstance.addEventListener('annotations.press', async (event: AnnotationPressEvent) => {
               if (event.annotation instanceof NutrientViewer.Annotations.LinkAnnotation) {
                 event.preventDefault?.();
                 const bbox = event.annotation?.toJSON()?.boundingBox?.toJSON() || null;

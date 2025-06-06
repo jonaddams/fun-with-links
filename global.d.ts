@@ -32,4 +32,16 @@ declare global {
   interface ViewerProps {
     document: string;
   }
+
+  interface AnnotationPressEvent {
+    annotation: {
+      pageIndex: number;
+      toJSON: () => {
+        boundingBox?: {
+          toJSON: () => unknown;
+        };
+      };
+    };
+    preventDefault?: () => void;
+  }
 }
