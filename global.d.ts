@@ -7,9 +7,27 @@ declare global {
     PSPDFKit: typeof PSPDFKit;
     viewerInstance?: any;
   }
+
+  interface AnnotationPressEvent {
+    annotation: any;
+    preventDefault?: () => void;
+  }
+
   // Define the type for the instance returned by NutrientViewer.load
   interface NutrientViewerInstance {
     [key: string]: any;
+  }
+
+  interface AnnotationPressEvent {
+    annotation: any;
+    preventDefault?: () => void;
+  }
+
+  declare global {
+    interface Window {
+      NutrientViewer: any;
+      viewerInstance: any;
+    }
   }
 
   interface LinkAnnotationPressEvent {
