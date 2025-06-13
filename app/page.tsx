@@ -1,4 +1,4 @@
-import Viewer from '@/components/viewer';
+import Viewer from '@/components/viewer-final';
 
 export default function Home() {
   return (
@@ -7,9 +7,7 @@ export default function Home() {
       <header className='bg-white shadow-sm border-b border-gray-200'>
         <div className='mx-auto px-4 sm:px-6 lg:px-4'>
           <div className='flex justify-between items-center h-16'>
-            <div className='flex items-center'>
-              <h1 className='text-xl font-semibold text-gray-900'>Link Manipulation POC</h1>
-            </div>
+            <div className='flex items-center'>{/* <h1 className='text-xl font-semibold text-gray-900'>ToC Links and Click Detection POC</h1> */}</div>
             <nav className='hidden md:flex space-x-8'>
               <a href='#' className='text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium'>
                 Home
